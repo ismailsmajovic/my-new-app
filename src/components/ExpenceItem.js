@@ -5,10 +5,17 @@ function ExpenceItem (props){
     const expenceTitle = 'Mobile Phone'
     const expenceAmount = 247.654; Mozemo ih koristiti lookalno ocv epodatke*/
 
+    const month = props.date.toLocaleString('en-US', {month: 'long'});
+    const day = props.date.toLocaleString('en-US', {day: '2-digit'});
+    const year = props.date.getFullYear();
 
     return (
       <div className='expence-item'>
-        <div>{props.date.toISOString()}</div>     
+        <div>
+          <div>{month}</div>
+          <div>{year}</div>
+          <div>{day}</div>
+        </div>     
         <div className='expence-item__description'>
           <h2>{props.title}</h2>
           <div className='expence-item__price'>${props.amount}</div>
@@ -18,6 +25,9 @@ function ExpenceItem (props){
 }  
     //toString i toDateString daju razlicite podateke o vremenu, toString daje opsirinije podatke
     //toISOString() inspect this function
+    //toLocaleString() also inspect this function
+    //{month: 'long'} zanimjnivo
+    
 ///return <h2>Expence Item!</h2>
 // if you want can used a arrow function
 
