@@ -1,3 +1,5 @@
+
+import ExpenceDate from './ExpenceDate';
 import './ExpenceItem.css';
 
 function ExpenceItem (props){
@@ -5,17 +7,13 @@ function ExpenceItem (props){
     const expenceTitle = 'Mobile Phone'
     const expenceAmount = 247.654; Mozemo ih koristiti lookalno ocv epodatke*/
 
-    const month = props.date.toLocaleString('en-US', {month: 'long'});
+    /*const month = props.date.toLocaleString('en-US', {month: 'long'});
     const day = props.date.toLocaleString('en-US', {day: '2-digit'});
-    const year = props.date.getFullYear();
+    const year = props.date.getFullYear();*/
 
     return (
       <div className='expence-item'>
-        <div>
-          <div>{month}</div>
-          <div>{year}</div>
-          <div>{day}</div>
-        </div>     
+        <ExpenceDate date={props.date}/>
         <div className='expence-item__description'>
           <h2>{props.title}</h2>
           <div className='expence-item__price'>${props.amount}</div>
