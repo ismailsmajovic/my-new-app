@@ -1,10 +1,12 @@
 
-import ExpenceDate from './ExpenceDate';
-import './ExpenceItem.css';
+import Card from './Card';
+import ExpenseDate from './ExpenseDate';
+import './ExpenseItem.css';
 
-function ExpenceItem (props){
+
+function ExpenseItem (props){
     /*const expenceDate = new Date()
-    const expenceTitle = 'Mobile Phone'
+    const expenceTitle = 'Mobile Phone'  
     const expenceAmount = 247.654; Mozemo ih koristiti lookalno ocv epodatke*/
 
     /*const month = props.date.toLocaleString('en-US', {month: 'long'});
@@ -12,13 +14,13 @@ function ExpenceItem (props){
     const year = props.date.getFullYear();*/
 
     return (
-      <div className='expence-item'>
-        <ExpenceDate date={props.date}/>
-        <div className='expence-item__description'>
+      <Card className='expense-item'>
+        <ExpenseDate date={props.date}/>
+        <div className='expense-item__description'>
           <h2>{props.title}</h2>
-          <div className='expence-item__price'>${props.amount}</div>
+          <div className='expense-item__price'>${props.amount}</div>
         </div>
-      </div>  
+      </Card>  
     )
 }  
     //toString i toDateString daju razlicite podateke o vremenu, toString daje opsirinije podatke
@@ -29,4 +31,4 @@ function ExpenceItem (props){
 ///return <h2>Expence Item!</h2>
 // if you want can used a arrow function
 
-export default ExpenceItem;
+export default ExpenseItem;
