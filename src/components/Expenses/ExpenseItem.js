@@ -15,11 +15,11 @@ const ExpenseItem = (props)=>{
     const year = props.date.getFullYear();*/
     //useState()
   //let title = props.title;
-  let[title, setTitle] = useState(props.title);  //in original code was  a const variable
+  const[title, setTitle] = useState(props.title);  //in original code was  a const variable, but show error when write a const
   console.log('ExpenseItem evaluated by React!');
 
     const clickHandler=()=>{
-      setTitle =('Updated');
+      setTitle('Updated');
       //console.log(setTitle);
       console.log(title);
     }
