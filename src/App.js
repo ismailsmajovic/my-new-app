@@ -32,9 +32,14 @@ const App =() =>{
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addExspenseHandler =()=>{
+    console.log('in app.js');
+    console.log(expenses)
+  }                                         //onAddExspense what it is function or?
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onAddExspense={addExspenseHandler}/>  
       <Expenses items={expenses}/>
     </div>
   );

@@ -4,6 +4,8 @@ import Card from '../UL/Card';
 import './Expenses.css';
 
 const Expenses =(props)=>{
+
+    
     return(
     <Card className="expenses">
         <ExpenseItem 
