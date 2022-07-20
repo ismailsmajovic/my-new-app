@@ -14,7 +14,7 @@ const ExpenceForm =()=>{
             </div>
             <div className="new-expense__control">
                 <label>Date</label>
-                <input type='nummber' min='2018-01-01' max='2022-01-01'/>   
+                <input type='date' min='2018-01-01' max='2022-01-01'/>   
             </div>
         </div>
         <div className="new-expense__actions">
