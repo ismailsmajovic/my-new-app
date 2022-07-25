@@ -8,9 +8,10 @@ const NewExpense =(props)=>{
         const expenseDate ={
             ...enteredExpenseData,
             id: Math.random().toString()
+            
         };
-        console.log(expenseDate);
-        props.onAddExspense()
+        //console.log(expenseDate);
+        props.onAddExspense(expenseDate)
     }
 
     return(

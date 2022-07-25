@@ -1,13 +1,13 @@
 //import ExpenseItem from "./components/ExpenseItem";import Expenses from "./components/Expenses";
 //import './App.css'
-import React from "react";
+import React, {useState} from "react";
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from "./components/NewExpense/NewExpense";
 
 
 
-const App =() =>{
-  const expenses = [
+
+  const DUMMY_EXPENSES = [   //expenses
     {
       id: 'e1',
       title: 'Cookies',
@@ -33,9 +33,18 @@ const App =() =>{
     },
   ];
 
-  const addExspenseHandler =()=>{
-    console.log('in app.js');
-    console.log(expenses)
+
+
+const App =() =>{
+    const [expenses, setExpenses] = useState(DUMMY_EXPENSES)
+
+  const addExspenseHandler = (expense) =>{
+    setExpenses((prevExpenses)=>{
+      return[expense,...prevExpenses];
+    });
+
+    //console.log('in app.js');
+    //console.log(expenses)
   }                                         //onAddExspense what it is function or?
   return (
     <div>

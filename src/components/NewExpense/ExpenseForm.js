@@ -53,7 +53,7 @@ const ExpenceForm =(props)=>{
             amount: enteredAmount,
             date: new Date(enteredDate)
         }
-        //console.log(expenseData);
+        console.log("data",expenseData);
         props.onSaveExpenseData();
         setEnteredDate('');
         setEnteredAmount('');
@@ -72,7 +72,7 @@ const ExpenceForm =(props)=>{
             </div>
             <div className="new-expense__control">
                 <label>Date</label>
-                <input type='date' min='2018-01-01' max='2022-01-01' onChange={dateChangeHandler} value={enteredDate}/>   
+                <input type='date' min='2019-01-01' max='2022-12-31' onChange={dateChangeHandler} value={enteredDate}/>   
             </div>
         </div>
         <div className="new-expense__actions">

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';   //without useSTATE
+import React from 'react';   //without useSTATE
 
 import ExpenseDate from './ExpenseDate';
 import Card from '../UL/Card';
@@ -15,13 +15,19 @@ const ExpenseItem = (props)=>{
     const year = props.date.getFullYear();*/
     //useState()
   //let title = props.title;
-  const[title, setTitle] = useState(props.title);  //in original code was  a const variable, but show error when write a const
+
+
+  
+    /*Ovde ne zlimo da menjamo naslov zato cemo ocvo kometarisati
+
+    const[title, setTitle] = useState(props.title);   
   console.log('ExpenseItem evaluated by React!');
 
     const clickHandler=()=>{
       setTitle('Updated');
       console.log(title);
-    }
+    }*/
+
     return (
       <Card className='expense-item'>
         <ExpenseDate date={props.date}/>
@@ -29,7 +35,6 @@ const ExpenseItem = (props)=>{
           <h2>{props.title}</h2>
           <div className='expense-item__price'>${props.amount}</div>
         </div>
-        <button onClick={clickHandler}>Change Title</button>
       </Card>  
     )
 }  
@@ -40,5 +45,9 @@ const ExpenseItem = (props)=>{
     
 ///return <h2>Expence Item!</h2>
 // if you want can used a arrow function
+
+
+
+// <button onClick={clickHandler}>Change Title</button>
 
 export default ExpenseItem;

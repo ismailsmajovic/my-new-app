@@ -1,21 +1,44 @@
 import React, { useState } from "react";
 import ExpenseItem from "../Expenses/ExpenseItem";
 import Card from '../UL/Card';
-import './Expenses.css';
 import ExpensesFilter from "./ExpensesFilter";
+import './Expenses.css';
 
 const Expenses =(props)=>{
 
-    const[filteredYear, setFilteredYear] = useState('2020')
+    const[filteredYear, setFilteredYear] = useState('2020');
 
     const filterChangeHandler = (selectedYear)=>{
-        setFilteredYear(selectedYear)
+        setFilteredYear(selectedYear);
     }
 //what it is selected, and onChangeHandler
+
+       console.log("ITEMS",props.items)
     return(
-    <Card className="expenses">
-        <ExpensesFilter seleted={filteredYear} onChangeFilter={filterChangeHandler}/>
-        <ExpenseItem 
+        <div>
+            <Card className="expenses">
+                <ExpensesFilter                         //undefined
+                seleted={filteredYear} 
+                onChangeFilter={filterChangeHandler}
+                />
+                {props.items.map((expense) => ( 
+                <ExpenseItem 
+                    title ={expense.title}            // kao nije definisano
+                    amount={expense.amount} 
+                    date={expense.date}
+                />
+              ))}
+
+            </Card>
+        </div>
+    );
+};
+
+export default Expenses;
+
+
+/*  ovo smo obrisali jer samo smanjili kod uz pomoc amp metode
+ <ExpenseItem 
             title={props.items[0].title}
             amount={props.items[0].amount}
             date={props.items[0].date}
@@ -35,9 +58,15 @@ const Expenses =(props)=>{
             amount={props.items[3].amount}
             date={props.items[3].date}
         />
-        
-    </Card>
-    );
-}
+        */
 
-export default Expenses;
+
+
+
+
+
+
+        /*
+          <ExpensesFilter seleted={filteredYear} onChangeFilter={filterChangeHandler}/>
+        {props.items.map(expense => <ExpenseItem title={expense.title} amount={expense.amount} date={expense.date}></ExpenseItem>)}
+        */
