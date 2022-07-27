@@ -5,7 +5,7 @@ import './Chart.css';
 const Chart = props =>{
     return <div className="chart">
         {props.dataPoints}
-    </div>
+    </div> 
 };
 
 export default Chart;
