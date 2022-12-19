@@ -4,7 +4,7 @@ import NewExpense from './components/NewExpense/NewExpense';
 import Expenses from './components/Expenses/Expenses';
 
 const DUMMY_EXPENSES = [
-  {
+  { 
     id: 'e1',
     title: 'Door',
     amount: 94.12,
