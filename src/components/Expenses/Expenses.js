@@ -31,7 +31,7 @@ const Expenses = (props) => {
   );
 };
 
-export default Expenses;
+export default Expenses; 
 
 /*  ovo smo obrisali jer samo smanjili kod uz pomoc amp metode
  <ExpenseItem 
